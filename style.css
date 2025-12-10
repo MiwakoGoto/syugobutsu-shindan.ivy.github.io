@@ -1,0 +1,255 @@
+/* ==================================== */
+/* I. 共通スタイル (BASE STYLES) */
+/* ==================================== */
+
+body {
+    /* フォントと文字色、行の高さの基本設定 */
+    font-family: 'Yu Mincho', YuMincho, 'Hiragino Mincho ProN', 'Hiragino Mincho Pro', serif;
+    color: #333;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0; 
+    text-align: center;
+}
+
+li {
+    /* リスト項目の左寄せ設定 */
+    text-align: left;
+}
+
+
+/* ==================================== */
+/* II. 守護仏紹介ページ スタイル (INTRO PAGE) */
+/* ==================================== */
+
+/* 1. 紹介ページのbody背景とパディング設定 */
+.intro-page-body {
+    background-color: #f8f4e6; /* 少し黄みがかった落ち着いた背景色 */
+    padding: 20px; 
+    min-height: 100vh; /* 画面の高さがコンテンツより低くても背景色を適用 */
+}
+
+/* 2. コンテンツボックス (.container) - 紹介ページ */
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* 3. タイトル (h1) - 紹介ページ */
+.container h1 {
+    font-size: 2.5em;
+    color: #6a0e0e; /* 深い赤色 */
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+.container h1::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: #a0522d; /* 茶色がかった赤 */
+    margin: 10px auto 0;
+}
+
+/* 4. サブタイトル (h2) - 紹介ページ */
+h2 {
+    font-size: 1.8em;
+    color: #8b4513; /* セピア色 */
+    border-bottom: 1px solid #dcdcdc;
+    padding-bottom: 10px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+/* 5. 画像 (.buddha-image) - 紹介ページ */
+.buddha-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin: 30px auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* 6. 説明文 (.description-section) - 紹介ページ */
+.description-section p {
+    text-align: left;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+/* 7. 真言セクション (.mantra-section) - 紹介ページ */
+.mantra-section {
+    background-color: #fffaf0; /* アイボリー */
+    border-left: 5px solid #a0522d;
+    padding: 20px;
+    margin-top: 40px;
+    text-align: left;
+}
+.mantra-section p {
+    margin: 5px 0;
+    font-size: 1.1em;
+}
+.mantra-section .mantra-text {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #6a0e0e;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* 8. 戻るリンク (.back-link) - 紹介ページ */
+.back-link {
+    display: inline-block;
+    margin-top: 50px;
+    padding: 10px 25px;
+    background-color: #a0522d;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.back-link:hover {
+    background-color: #8b4513;
+}
+
+
+/* ==================================== */
+/* III. TOPページ スタイル (HOME PAGE) */
+/* ==================================== */
+
+/* 1. TOPページのbody背景設定 */
+.top-page-body {
+    background-image: url('gokuraku_bg.png'); /* 画像のパス */
+    background-size: cover; /* PC表示では画面全体を覆うように設定 */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-color: #f8e1e1; 
+    line-height: 1.6;
+    margin: 0; /* bodyで設定済みだが、画像設定のため念のため維持 */
+    padding: 0; /* bodyで設定済みだが、画像設定のため念のため維持 */
+    min-height: 100vh; /* 画面の高さを確保 */
+    /* ★追加: TOPページ専用でスクロールを非表示にする設定 */
+    overflow-y: hidden; 
+    overflow-x: hidden;
+    height: 100vh; /* 画面高に合わせる (min-height: 100vh から変更) */
+}
+
+/* 2. コンテンツボックス (.top-page-container) - TOPページ */
+.top-page-container {
+    width: 80%;
+    max-width: 600px;
+    
+    /* PC表示でのコンテンツ位置 */
+    margin: 200px auto 40px; 
+    
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.85); /* 半透明の白 */
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    color: #333;
+}
+
+/* 3. タイトル (h1) - TOPページ */
+.top-page-container h1 {
+    font-family: 'Yu Mincho', YuMincho, serif;
+    font-size: 2em;
+    color: #6a0e0e;
+    letter-spacing: 0.1em;
+    border-bottom: 2px solid #e0b4a4;
+    padding-bottom: 10px;
+    margin-bottom: 25px; 
+}
+
+/* 4. 入力フィールド (#yearInput) - TOPページ */
+#yearInput {
+    padding: 12px;
+    font-size: 1.1em;
+    border: 2px solid #e0b4a4;
+    border-radius: 8px;
+    text-align: center;
+    width: 60%;
+    max-width: 200px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-right: 10px; 
+}
+
+/* 5. ボタン (button) - TOPページ */
+button {
+    padding: 12px 25px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #a0522d;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+button:hover {
+    background-color: #8b4513;
+    transform: translateY(-2px);
+}
+
+/* ==================================== */
+/* IV. レスポンシブ対応 (MEDIA QUERIES) */
+/* ==================================== */
+
+@media (max-width: 600px) {
+    /* 画面幅が600px以下のデバイス（主にスマートフォン）に適用 */
+
+    /* 1. TOPページ背景の調整 (画像の見え方の修正) */
+    .top-page-body {
+        /* 横幅を画面いっぱいにし、縦に切り取られるのを防ぎます */
+        background-size: 100% auto; 
+        
+        /* 画像を画面上端に固定することで、コンテンツの位置調整がしやすくなります */
+        background-position: center top; 
+    }
+
+    /* 2. TOPページ コンテンツ (.top-page-container) の調整 */
+    .top-page-container {
+        /* ★修正点: スマホでのコンテンツの上マージンを減らします。 */
+        /* 例: 15vh（画面高の15%）から 10vh（画面高の10%）に変更 */
+        /* または、固定値 (例: 80px) に変更し、画像の上部に近づけます。 */
+        margin: 10vh auto; 
+        
+        padding: 30px 20px; 
+        width: 90%; 
+        max-width: none; 
+    }
+    
+    /* 3. 紹介ページの余白を調整 */
+    .intro-page-body {
+        padding: 10px; 
+    }
+    
+    /* 4. 紹介ページのコンテナ幅調整 */
+    .container {
+        margin: 20px auto; 
+    }
+
+    /* 5. タイトル (h1) の文字サイズを小さく */
+    .top-page-container h1, .container h1 {
+        font-size: 1.8em;
+    }
+
+    /* 6. 入力とボタンを縦に並べる調整 */
+    #yearInput {
+        width: 90%; 
+        margin: 10px 0; 
+        display: block; 
+    }
+    
+    button {
+        width: 90%; 
+        margin-top: 15px;
+        display: block; 
+    }
+}
